@@ -196,7 +196,7 @@ export default function Programme() {
             Rejoignez la prochaine session et transformez votre avenir
           </p>
           <a
-            href="#contact"
+            href="https://api.whatsapp.com/send?phone=%2B24160422342&context=ARDitGLoGOK3cBCqVGYoeIMhvGoan8JkAczlzu1mM868nyW6_g8wnXXEdCSAKnAcCNqMBjblMTGltULkNXu4Ai9x0GeX53YIlvU80D7f5eo3qI7kVTd2_i9kUozLKY6_jKkGYDKC_w7Qnb__3Kuy58E2uQ&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawHhMaVleHRuA2FlbQIxMAABHejG-cod0nAlo_yI0wE2QI_HfJe7DAktXucDacBjrXv9MtBc4wR7tZmBuQ_aem_gKyBZhBq94k0QBOlvN2OAgt"
             className="inline-block bg-white text-[#fd5f05] px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             S'inscrire à la Formation

@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Users, Award, BookOpen, TrendingUp, Youtube } from 'lucide-react';
+import CountUp from "react-countup";
 
 export default function Home() {
   return (
@@ -21,7 +22,7 @@ export default function Home() {
           {/* Boutons d'action */}
           <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
             <a
-              href="https://api.whatsapp.com/send?phone=%2B24107976941&context=ARDitGLoGOK3cBCqVGYoeIMhvGoan8JkAczlzu1mM868nyW6_g8wnXXEdCSAKnAcCNqMBjblMTGltULkNXu4Ai9x0GeX53YIlvU80D7f5eo3qI7kVTd2_i9kUozLKY6_jKkGYDKC_w7Qnb__3Kuy58E2uQ&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawHhMaVleHRuA2FlbQIxMAABHejG-cod0nAlo_yI0wE2QI_HfJe7DAktXucDacBjrXv9MtBc4wR7tZmBuQ_aem_gKyBZhBq94k0QBOlvN2OAgt"
+              href="https://api.whatsapp.com/send?phone=%2B24160422342&context=ARDitGLoGOK3cBCqVGYoeIMhvGoan8JkAczlzu1mM868nyW6_g8wnXXEdCSAKnAcCNqMBjblMTGltULkNXu4Ai9x0GeX53YIlvU80D7f5eo3qI7kVTd2_i9kUozLKY6_jKkGYDKC_w7Qnb__3Kuy58E2uQ&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawHhMaVleHRuA2FlbQIxMAABHejG-cod0nAlo_yI0wE2QI_HfJe7DAktXucDacBjrXv9MtBc4wR7tZmBuQ_aem_gKyBZhBq94k0QBOlvN2OAgt"
               className="inline-flex items-center bg-[#fd5f05] text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-[#e54d00] transition-colors"
             >
               Commencer Maintenant
@@ -39,41 +40,49 @@ export default function Home() {
       </div>
     </section>
      
-      {/* Stats Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-[#fd5f05] mb-2">
-                <Users className="h-8 w-8 mx-auto" />
-              </div>
-              <div className="text-3xl font-bold mb-2">20+</div>
-              <div className="text-gray-600">Apprenants Formés</div>
-            </div>
-            <div>
-              <div className="text-[#fd5f05] mb-2">
-                <Award className="h-8 w-8 mx-auto" />
-              </div>
-              <div className="text-3xl font-bold mb-2">3</div>
-              <div className="text-gray-600">Éditions Réussies</div>
-            </div>
-            <div>
-              <div className="text-[#fd5f05] mb-2">
-                <BookOpen className="h-8 w-8 mx-auto" />
-              </div>
-              <div className="text-3xl font-bold mb-2">90%</div>
-              <div className="text-gray-600">Taux de Réussite</div>
-            </div>
-            <div>
-              <div className="text-[#fd5f05] mb-2">
-                <TrendingUp className="h-8 w-8 mx-auto" />
-              </div>
-              <div className="text-3xl font-bold mb-2">24/7</div>
-              <div className="text-gray-600">Support Continu</div>
-            </div>
-          </div>
+     {/* Stats Section */}
+<section className="py-16 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <div className="text-[#fd5f05] mb-2">
+          <Users className="h-8 w-8 mx-auto" />
         </div>
-      </section>
+        <div className="text-3xl font-bold mb-2">
+          <CountUp start={0} end={20} duration={20} suffix="+" />
+        </div>
+        <div className="text-gray-600">Apprenants Formés</div>
+      </div>
+      <div>
+        <div className="text-[#fd5f05] mb-2">
+          <Award className="h-8 w-8 mx-auto" />
+        </div>
+        <div className="text-3xl font-bold mb-2">
+          <CountUp start={0} end={3} duration={25} />
+        </div>
+        <div className="text-gray-600">Éditions Réussies</div>
+      </div>
+      <div>
+        <div className="text-[#fd5f05] mb-2">
+          <BookOpen className="h-8 w-8 mx-auto" />
+        </div>
+        <div className="text-3xl font-bold mb-2">
+          <CountUp start={0} end={90} duration={10} suffix="%" />
+        </div>
+        <div className="text-gray-600">Taux de Réussite</div>
+      </div>
+      <div>
+        <div className="text-[#fd5f05] mb-2">
+          <TrendingUp className="h-8 w-8 mx-auto" />
+        </div>
+        <div className="text-3xl font-bold mb-2">
+          <CountUp start={0} end={24} duration={20} suffix="/7" />
+        </div>
+        <div className="text-gray-600">Support Continu</div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Why Crypto Section */}
       <section className="py-16 bg-gray-50">
@@ -96,7 +105,7 @@ Cette formation ne vous donne pas seulement des compétences techniques, <strong
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-bold mb-4">Un Accompagnement Personnalisé sur 3 Mois</h3>
-              <p className="text-gray-600">Chez Crypto Elite d’Afrique, nous croyons en un apprentissage guidé et interactif : <br /> <br />
+              <p className="text-gray-600"><strong>Chez Crypto Elite d’Afrique, nous croyons en un apprentissage guidé et interactif :</strong> <br /> <br />
 
              <strong>✓ Cours en direct : </strong> Pas de vidéos préenregistrées ! Nous avançons à vos côtés, avec un réel accompagnement, étape par étape. <br />
 <strong>✓ Mix Présentiel et En Ligne :</strong> Choisissez le format qui vous convient le mieux, tout en bénéficiant d’un accès continu à nos contenus. <br />
@@ -274,7 +283,7 @@ Nous sommes avec vous main dans la main, pour transformer vos connaissances et v
         {/* CTA Button */}
         <div className="text-center">
   <a
-    href="#"
+    href="https://api.whatsapp.com/send?phone=%2B24160422342&context=ARDitGLoGOK3cBCqVGYoeIMhvGoan8JkAczlzu1mM868nyW6_g8wnXXEdCSAKnAcCNqMBjblMTGltULkNXu4Ai9x0GeX53YIlvU80D7f5eo3qI7kVTd2_i9kUozLKY6_jKkGYDKC_w7Qnb__3Kuy58E2uQ&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawHhMaVleHRuA2FlbQIxMAABHejG-cod0nAlo_yI0wE2QI_HfJe7DAktXucDacBjrXv9MtBc4wR7tZmBuQ_aem_gKyBZhBq94k0QBOlvN2OAgt"
     className="bg-[#FD5F05] text-white font-bold text-lg px-8 py-4 rounded-full shadow-md hover:bg-[#e45405] transition duration-300 w-full sm:w-auto"
   >
     S'inscrire
@@ -336,7 +345,7 @@ Nous sommes avec vous main dans la main, pour transformer vos connaissances et v
             Rejoignez la 4ème édition du Crypto Elite d'Afrique
           </p>
           <a
-            href="https://api.whatsapp.com/send?phone=%2B24107976941&context=ARDitGLoGOK3cBCqVGYoeIMhvGoan8JkAczlzu1mM868nyW6_g8wnXXEdCSAKnAcCNqMBjblMTGltULkNXu4Ai9x0GeX53YIlvU80D7f5eo3qI7kVTd2_i9kUozLKY6_jKkGYDKC_w7Qnb__3Kuy58E2uQ&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawHhMaVleHRuA2FlbQIxMAABHejG-cod0nAlo_yI0wE2QI_HfJe7DAktXucDacBjrXv9MtBc4wR7tZmBuQ_aem_gKyBZhBq94k0QBOlvN2OAgt"
+            href="https://api.whatsapp.com/send?phone=%2B24160422342&context=ARDitGLoGOK3cBCqVGYoeIMhvGoan8JkAczlzu1mM868nyW6_g8wnXXEdCSAKnAcCNqMBjblMTGltULkNXu4Ai9x0GeX53YIlvU80D7f5eo3qI7kVTd2_i9kUozLKY6_jKkGYDKC_w7Qnb__3Kuy58E2uQ&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawHhMaVleHRuA2FlbQIxMAABHejG-cod0nAlo_yI0wE2QI_HfJe7DAktXucDacBjrXv9MtBc4wR7tZmBuQ_aem_gKyBZhBq94k0QBOlvN2OAgt"
             className="inline-block bg-white text-[#fd5f05] px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             S'inscrire Maintenant
