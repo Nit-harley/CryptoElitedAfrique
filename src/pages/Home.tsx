@@ -29,7 +29,7 @@ export default function Home() {
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
             <a
-              href="https://crypto-elited-afrique-ks8h.vercel.app/programme"
+              href="/programme"
               className="inline-flex items-center bg-white text-[#fd5f05] border border-[#fd5f05] px-8 py-3 rounded-full text-lg font-semibold hover:bg-[#e54d00] hover:text-white transition-colors"
             >
               Voir le Programme

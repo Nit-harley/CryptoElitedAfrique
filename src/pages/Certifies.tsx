@@ -6,16 +6,16 @@ export default function Certifies() {
 
   // Example certified students data
   const certifiedStudents = [
-    { id: 1, name: 'NGAKISSA Gullicya Ruudenne', edition: 1, year: 2024, specialization: '', photo: '/public/gu.jpg' },
-    { id: 2, name: 'NKOUMBA Jude Elysée', edition: 1, year: 2024, specialization: 'Formateur Crypto Afrique Futur', photo: '/public/jude.jpg' },
-    { id: 3, name: 'OKOUYI KONGO Laurent Franck Noel', edition: 1, year: 2024, specialization: 'Finance Décentralisé', photo: '/public/laurent.jpg' },
-    { id: 4, name: 'KALGORA Moua', edition: 1, year: 2024, specialization: '', photo: '/public/image.png' },
-    { id: 5, name: 'TSINGA Nicole', edition: 1, year: 2024, specialization: '', photo: '/public/nicole.jpg' },
-    { id: 6, name: 'DOTONOU Ulrich Djidjoho', edition: 1, year: 2024, specialization: '', photo: '/public/image.png' },
-    { id: 7, name: 'NKOGUE Louis Eddan', edition: 1, year: 2024, specialization: 'Finance Décentralisé', photo: '/public/louis.jpg' },
-    { id: 8, name: 'GUEBEKA Jean Claude', edition: 2, year: 2024, specialization: '', photo: '/public/jeanclaude.jpg' },
-    { id: 9, name: 'Mibessy Gregu Chadrack', edition: 2, year: 2024, specialization: 'Formateur Crypto Afrique Futur', photo: '/public/shadrack.png' },
-    { id: 10, name: 'ZAMPOU Saharatou', edition: 2, year: 2024, specialization: 'Formatrice Crypto Afrique Futur', photo: '/public/saharatou.jpg' },
+    { id: 1, name: 'NGAKISSA Gullicya Ruudenne', edition: 1, year: 2024, specialization: '', photo: '/gu.jpg' },
+    { id: 2, name: 'NKOUMBA Jude Elysée', edition: 1, year: 2024, specialization: 'Formateur Crypto Afrique Futur', photo: '/jude.jpg' },
+    { id: 3, name: 'OKOUYI KONGO Laurent Franck Noel', edition: 1, year: 2024, specialization: 'Finance Décentralisé', photo: '/laurent.jpg' },
+    { id: 4, name: 'KALGORA Moua', edition: 1, year: 2024, specialization: '', photo: '/image.png' },
+    { id: 5, name: 'TSINGA Nicole', edition: 1, year: 2024, specialization: '', photo: '/nicole.jpg' },
+    { id: 6, name: 'DOTONOU Ulrich Djidjoho', edition: 1, year: 2024, specialization: '', photo: '/image.png' },
+    { id: 7, name: 'NKOGUE Louis Eddan', edition: 1, year: 2024, specialization: 'Finance Décentralisé', photo: '/louis.jpg' },
+    { id: 8, name: 'GUEBEKA Jean Claude', edition: 2, year: 2024, specialization: '', photo: '/jeanclaude.jpg' },
+    { id: 9, name: 'Mibessy Gregu Chadrack', edition: 2, year: 2024, specialization: 'Formateur Crypto Afrique Futur', photo: '/shadrack.png' },
+    { id: 10, name: 'ZAMPOU Saharatou', edition: 2, year: 2024, specialization: 'Formatrice Crypto Afrique Futur', photo: '/saharatou.jpg' },
     // Add more students as needed
   ];
 
