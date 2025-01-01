@@ -219,6 +219,79 @@ Nous sommes avec vous main dans la main, pour transformer vos connaissances et v
   </div>
 </section>
 
+{/* Pricing Section */}
+<section className="py-16 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    {/* Header Section */}
+    <div className="text-center mb-12">
+      <h2 className="text-4xl font-extrabold text-gray-800">
+        Une Formation Unique en Cryptomonnaies
+      </h2>
+      <p className="text-lg text-gray-600 mt-4">
+        Développez vos compétences avec un tarif clair et accessible. Investissez dans votre avenir dès aujourd'hui !
+      </p>
+    </div>
+
+    {/* Pricing Card */}
+    <div className="max-w-lg mx-auto bg-white rounded-lg shadow-lg overflow-hidden border-2 border-[#FD5F05]">
+      <div className="p-8">
+        <h3 className="text-2xl font-bold text-center text-gray-800 mb-4">
+          Offre de Formation Complète
+        </h3>
+        <div className="flex justify-center items-center mb-6">
+          <p className="text-4xl font-extrabold text-[#FD5F05]">
+            310,000 FCFA
+          </p>
+          <span className="text-gray-500 text-sm ml-2">(Total sur 3 mois)</span>
+        </div>
+        <p className="text-center text-gray-600 mb-8">
+          <strong>Inscription :</strong> <span className="text-[#FD5F05]">10,000 FCFA</span> <br />
+          <strong>Formation :</strong> <span className="text-[#FD5F05]">100,000 FCFA / mois</span> sur 3 mois
+        </p>
+
+        {/* Features List */}
+        <ul className="text-gray-600 space-y-4 mb-8">
+          <li className="flex items-center">
+            <svg className="h-6 w-6 text-[#FD5F05] mr-3" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            Accès complet aux modules et ressources
+          </li>
+          <li className="flex items-center">
+            <svg className="h-6 w-6 text-[#FD5F05] mr-3" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            Suivi personnalisé avec des experts
+          </li>
+          <li className="flex items-center">
+            <svg className="h-6 w-6 text-[#FD5F05] mr-3" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            Certification à la fin de la formation
+          </li>
+        </ul>
+
+        {/* CTA Button */}
+        <div className="text-center">
+  <a
+    href="#"
+    className="bg-[#FD5F05] text-white font-bold text-lg px-8 py-4 rounded-full shadow-md hover:bg-[#e45405] transition duration-300 w-full sm:w-auto"
+  >
+    S'inscrire
+  </a>
+</div>
+
+      </div>
+      <div className="bg-[#FD5F05] py-4 text-center text-white">
+        <p className="text-sm">
+          Dépêchez-vous, les places sont limitées !
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
       {/* FAQ Section */}
       <section className="py-16 bg-gray-50">
