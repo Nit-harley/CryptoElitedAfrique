@@ -8,6 +8,7 @@ import Programme from './pages/Programme';
 import Certifies from './pages/Certifies';
 import About from './pages/About';
 import Quiz from './pages/Quiz';
+import Shop from './pages/Shop';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Route path="/certifies" element={<Certifies />} />
             <Route path="/about" element={<About />} />
             <Route path="/quiz" element={<Quiz />} />
+            <Route path="/shop" element={<Shop />} />
           </Routes>
         </main>
         <Footer />

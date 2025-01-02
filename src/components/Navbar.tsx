@@ -36,6 +36,9 @@ export default function Navbar() {
             <Link to="/quiz" className="text-gray-700 hover:text-[#fd5f05] transition-colors">
               Quiz
             </Link>
+            <Link to="/shop" className="text-gray-700 hover:text-[#fd5f05] transition-colors">
+              Shop
+            </Link>
             <Link to="/about" className="text-gray-700 hover:text-[#fd5f05] transition-colors">
               À propos
             </Link>
@@ -88,6 +91,13 @@ export default function Navbar() {
               onClick={handleLinkClick}
             >
               Quiz
+            </Link>
+            <Link
+              to="/shop"
+              className="block px-3 py-2 text-gray-700 hover:text-[#fd5f05]"
+              onClick={handleLinkClick}
+            >
+              Shop
             </Link>
             <Link
               to="/about"
