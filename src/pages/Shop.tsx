@@ -87,6 +87,14 @@ export default function Shop() {
       className="bg-white border border-gray-300 shadow-lg p-4 rounded-lg w-11/12 sm:w-1/3 relative"
       onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the popup
     >
+      {/* Close Button */}
+      <button
+        className="absolute top-2 right-2 text-gray-600 hover:text-gray-900 transition"
+        onClick={() => setShowMiniCart(false)}
+      >
+        &times;
+      </button>
+      
       <h4 className="text-lg font-semibold text-center">Produit ajouté au panier !</h4>
       <ul className="mt-2 text-gray-700 text-center">
         {cart.slice(-3).map((item, index) => (
@@ -104,6 +112,7 @@ export default function Shop() {
     </div>
   </div>
 )}
+
 
 
       {/* Hero Section */}
