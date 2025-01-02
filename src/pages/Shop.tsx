@@ -79,23 +79,32 @@ export default function Shop() {
     <div className="relative">
       {/* Mini Cart Notification */}
       {showMiniCart && (
-        <div className="fixed bottom-16 right-4 bg-white border border-gray-300 shadow-lg p-4 rounded-lg animate-fade-in">
-          <h4 className="text-lg font-semibold">Produit ajouté au panier !</h4>
-          <ul className="mt-2">
-            {cart.slice(-3).map((item, index) => (
-              <li key={index} className="text-gray-700">
-                {item.product.name} (x{item.quantity})
-              </li>
-            ))}
-          </ul>
-          <button
-            className="mt-2 bg-[#fd5f05] text-white px-4 py-2 rounded-lg shadow hover:bg-[#e54d00] transition"
-            onClick={handlePurchase}
-          >
-            Voir le Panier
-          </button>
-        </div>
-      )}
+  <div
+    className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+    onClick={() => setShowMiniCart(false)} // Close popup on background click
+  >
+    <div
+      className="bg-white border border-gray-300 shadow-lg p-4 rounded-lg w-11/12 sm:w-1/3 relative"
+      onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the popup
+    >
+      <h4 className="text-lg font-semibold text-center">Produit ajouté au panier !</h4>
+      <ul className="mt-2 text-gray-700 text-center">
+        {cart.slice(-3).map((item, index) => (
+          <li key={index}>
+            {item.product.name} (x{item.quantity})
+          </li>
+        ))}
+      </ul>
+      <button
+        className="mt-4 bg-[#fd5f05] text-white px-6 py-2 rounded-lg shadow hover:bg-[#e54d00] transition w-full"
+        onClick={handlePurchase}
+      >
+        Passer à l'achat
+      </button>
+    </div>
+  </div>
+)}
+
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-[#fd5f05] to-orange-600 text-white py-20">
