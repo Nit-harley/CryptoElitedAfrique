@@ -71,7 +71,7 @@ export default function Shop() {
 
   const handlePurchase = () => {
     const message = encodeURIComponent(generateWhatsAppMessage());
-    const whatsappURL = `https://wa.me/24177976941?text=${message}`;
+    const whatsappURL = `https://wa.me/24160422342?text=${message}`;
     window.open(whatsappURL, "_blank");
   };
 
