@@ -86,7 +86,7 @@ export default function Home() {
         <div className="text-3xl font-bold mb-2">
           <CountUp start={0} end={20} duration={20} suffix="+" />
         </div>
-        <div className="text-gray-600">Apprenants Formés</div>
+        <div className="text-gray-600">Experts Formés</div>
       </div>
       <div>
         <div className="text-[#fd5f05] mb-2">
