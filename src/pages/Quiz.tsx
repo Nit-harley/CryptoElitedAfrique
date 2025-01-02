@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import { CheckCircle, XCircle } from 'lucide-react';
 
 const questions = [
@@ -280,17 +280,34 @@ const questions = [
 
 ];
 
+
 export default function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [showExplanation, setShowExplanation] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(15);
+  const [quizStarted, setQuizStarted] = useState(false); 
+
+  useEffect(() => {
+    if (quizStarted && timeLeft > 0) {
+      const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
+      return () => clearTimeout(timer);
+    } else if (timeLeft === 0) {
+      handleNextQuestion();
+    }
+  }, [timeLeft, quizStarted]);
+
+  const startQuiz = () => {
+    setQuizStarted(true);
+    setTimeLeft(15); 
+  };
 
   const handleAnswerClick = (selectedOption: number) => {
+    if (!quizStarted) return; // Empêche de répondre avant de commencer
     setSelectedAnswer(selectedOption);
     setShowExplanation(true);
-    
     if (selectedOption === questions[currentQuestion].correctAnswer) {
       setScore(score + 1);
     }
@@ -299,7 +316,8 @@ export default function Quiz() {
   const handleNextQuestion = () => {
     setShowExplanation(false);
     setSelectedAnswer(null);
-    
+    setTimeLeft(15);
+
     if (currentQuestion + 1 < questions.length) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
@@ -313,17 +331,17 @@ export default function Quiz() {
     setShowScore(false);
     setSelectedAnswer(null);
     setShowExplanation(false);
+    setTimeLeft(15);
+    setQuizStarted(false);
   };
 
   return (
     <div className="pt-16">
       <section className="bg-gradient-to-r from-gray-900 to-black text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Testez Vos Connaissances
-          </h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Testez Vos Connaissances</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Évaluez votre niveau en cryptomonnaies avec notre quiz
+            Évaluez vos connaissances sur les cryptomonnaies avec notre quiz interactif.
           </p>
         </div>
       </section>
@@ -340,7 +358,7 @@ export default function Quiz() {
                 {score === questions.length ? (
                   <p className="text-green-600 mb-6">Excellent ! Vous maîtrisez les bases des cryptomonnaies !</p>
                 ) : score >= questions.length / 2 ? (
-                  <p className="text-[#fd5f05] mb-6">Bon travail ! Continuez d'apprendre pour progresser.</p>
+                  <p className="text-[#fd5f05] mb-6">Bon travail ! Continuez à apprendre pour progresser.</p>
                 ) : (
                   <p className="text-red-600 mb-6">Vous pouvez améliorer vos connaissances en suivant notre formation !</p>
                 )}
@@ -354,16 +372,19 @@ export default function Quiz() {
             ) : (
               <div>
                 <div className="mb-8">
-                  <h2 className="text-xl font-bold mb-4">
-                    Question {currentQuestion + 1}/{questions.length}
-                  </h2>
+                  <div className="flex justify-between items-center mb-4">
+                    <h2 className="text-xl font-bold">Question {currentQuestion + 1}/{questions.length}</h2>
+                    <div className="text-lg font-semibold text-[#fd5f05]">
+                      Temps restant : {timeLeft}s
+                    </div>
+                  </div>
                   <p className="text-lg mb-6">{questions[currentQuestion].question}</p>
                   <div className="space-y-4">
                     {questions[currentQuestion].options.map((option, index) => (
                       <button
                         key={index}
                         onClick={() => handleAnswerClick(index)}
-                        disabled={showExplanation}
+                        disabled={!quizStarted || showExplanation}  
                         className={`w-full text-left p-4 rounded-lg border transition-colors ${
                           showExplanation
                             ? index === questions[currentQuestion].correctAnswer
@@ -387,6 +408,7 @@ export default function Quiz() {
                     ))}
                   </div>
                 </div>
+
                 {showExplanation && (
                   <div className="text-center">
                     <button
@@ -397,6 +419,17 @@ export default function Quiz() {
                     </button>
                   </div>
                 )}
+              </div>
+            )}
+
+            {!quizStarted && !showScore && (
+              <div className="text-center">
+                <button
+                  onClick={startQuiz}
+                  className="bg-[#fd5f05] text-white px-6 py-3 rounded-full hover:bg-[#e54d00] transition-colors"
+                >
+                  Commencer le Quiz
+                </button>
               </div>
             )}
           </div>
