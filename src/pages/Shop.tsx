@@ -14,12 +14,12 @@ interface CartItem {
 }
 
 const products: Product[] = [
-  { id: 1, name: "T-shirt Crypto", category: "Vêtements", price: 10000, image: "/public/teeshirt1.jpg" },
-  { id: 2, name: "Pull Crypto", category: "Vêtements", price: 18000, image: "/public/pull.png" },
-  { id: 3, name: "Casquette Crypto", category: "Accessoires", price: 10000, image: "/public/casquette.png" },
-  { id: 4, name: "Clé Ledger Nano S Plus", category: "Sécurité", price: 185000, image: "/public/ledger.jpg" },
-  { id: 5, name: "Livre Crypto", category: "Livres", price: 15000, image: "/public/livre1.jpg" },
-  { id: 6, name: "USDT", category: "Crypto", price: 790, image: "/public/usdt.jpg" },
+  { id: 1, name: "T-shirt Crypto", category: "Vêtements", price: 10000, image: "/teeshirt1.jpg" },
+  { id: 2, name: "Pull Crypto", category: "Vêtements", price: 18000, image: "/pull.png" },
+  { id: 3, name: "Casquette Crypto", category: "Accessoires", price: 10000, image: "/casquette.png" },
+  { id: 4, name: "Clé Ledger Nano S Plus", category: "Sécurité", price: 185000, image: "/ledger.jpg" },
+  { id: 5, name: "Livre Crypto", category: "Livres", price: 15000, image: "/livre1.jpg" },
+  { id: 6, name: "USDT", category: "Crypto", price: 790, image: "/usdt.jpg" },
 ];
 
 export default function Shop() {
