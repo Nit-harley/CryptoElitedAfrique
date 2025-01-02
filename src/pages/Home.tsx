@@ -20,22 +20,57 @@ export default function Home() {
           </p>
   
           {/* Boutons d'action */}
-          <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
-            <a
-              href="https://api.whatsapp.com/send?phone=%2B24160422342&context=ARDitGLoGOK3cBCqVGYoeIMhvGoan8JkAczlzu1mM868nyW6_g8wnXXEdCSAKnAcCNqMBjblMTGltULkNXu4Ai9x0GeX53YIlvU80D7f5eo3qI7kVTd2_i9kUozLKY6_jKkGYDKC_w7Qnb__3Kuy58E2uQ&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawHhMaVleHRuA2FlbQIxMAABHejG-cod0nAlo_yI0wE2QI_HfJe7DAktXucDacBjrXv9MtBc4wR7tZmBuQ_aem_gKyBZhBq94k0QBOlvN2OAgt"
-              className="inline-flex items-center bg-[#fd5f05] text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-[#e54d00] transition-colors"
-            >
-              Commencer Maintenant
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-            <a
-              href="/programme"
-              className="inline-flex items-center bg-white text-[#fd5f05] border border-[#fd5f05] px-8 py-3 rounded-full text-lg font-semibold hover:bg-[#e54d00] hover:text-white transition-colors"
-            >
-              Voir le Programme
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-          </div>
+          <div className="relative inline-block flex items-center justify-center">
+    {/* Flèches animées à gauche */}
+    <div className="hidden sm:block absolute -left-10 top-1/2 transform -translate-y-1/2 animate-bounce">
+      <svg
+        className="h-6 w-6 text-[#fd5f05]"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14m7-7H5" />
+      </svg>
+    </div>
+    {/* Bouton principal */}
+    <a
+      href="#program-details"
+      className="inline-flex items-center bg-[#fd5f05] text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-[#e54d00] transition-colors"
+    >
+      Découvrez le Programme
+    </a>
+    {/* Flèches animées à droite */}
+    <div className="hidden sm:block absolute -right-10 top-1/2 transform -translate-y-1/2 animate-bounce">
+      <svg
+        className="h-6 w-6 text-[#fd5f05]"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14m7-7H5" />
+      </svg>
+    </div>
+  </div>
+  {/* Flèche vers le bas */}
+  <div className="mt-8 flex justify-center">
+    <div className="animate-bounce">
+      <svg
+        className="h-6 w-6 text-[#fd5f05] sm:h-8 sm:w-8"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+      </svg>
+    </div>
+  </div>
+  
         </div>
       </div>
     </section>
@@ -105,7 +140,7 @@ Cette formation ne vous donne pas seulement des compétences techniques, <strong
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-bold mb-4">Un Accompagnement Personnalisé sur 3 Mois</h3>
-              <p className="text-gray-600"><strong>Chez Crypto Elite d’Afrique, nous croyons en un apprentissage guidé et interactif :</strong> <br /> <br />
+              <p className="text-gray-600"><strong>Chez Crypto Afrique Futur, nous croyons en un apprentissage guidé et interactif :</strong> <br /> <br />
 
              <strong>✓ Cours en direct : </strong> Pas de vidéos préenregistrées ! Nous avançons à vos côtés, avec un réel accompagnement, étape par étape. <br />
 <strong>✓ Mix Présentiel et En Ligne :</strong> Choisissez le format qui vous convient le mieux, tout en bénéficiant d’un accès continu à nos contenus. <br />
@@ -329,6 +364,14 @@ Nous sommes avec vous main dans la main, pour transformer vos connaissances et v
               </summary>
               <p className="mt-4 text-gray-600">
                 Les cours sont dispensés en format hybride : sessions en ligne et présentielles, avec un suivi personnalisé.
+              </p>
+            </details>
+            <details className="bg-white rounded-lg shadow-lg p-6">
+              <summary className="text-lg font-semibold cursor-pointer">
+                Quelles sont les jours et les horaires de formation ?
+              </summary>
+              <p className="mt-4 text-gray-600">
+                La formation se déroule le samedi et le dimanche, de 15H30 à 17H30 pour les personnes en presentiel et de 18H00 à 20H00 pour les personnes en ligne. <br /> En effet, les jours de semaines permettent les revisions, et des seances privées peuvent etre sollicité si necessaire.
               </p>
             </details>
           </div>

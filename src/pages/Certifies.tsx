@@ -11,7 +11,7 @@ export default function Certifies() {
     { id: 3, name: 'OKOUYI KONGO Laurent Franck Noel', edition: 1, year: 2024, specialization: 'Finance Décentralisé', photo: '/laurent.jpg' },
     { id: 4, name: 'KALGORA Moua', edition: 1, year: 2024, specialization: '', photo: '/image.png' },
     { id: 5, name: 'TSINGA Nicole', edition: 1, year: 2024, specialization: '', photo: '/nicole.jpg' },
-    { id: 6, name: 'DOTONOU Ulrich Djidjoho', edition: 1, year: 2024, specialization: '', photo: '/image.png' },
+    { id: 6, name: 'DOTONOU Ulrich Djidjoho', edition: 1, year: 2024, specialization: '', photo: '/ulrich.jpg' },
     { id: 7, name: 'NKOGUE Louis Eddan', edition: 1, year: 2024, specialization: 'Finance Décentralisé', photo: '/louis.jpg' },
     { id: 8, name: 'GUEBEKA Jean Claude', edition: 2, year: 2024, specialization: '', photo: '/jeanclaude.jpg' },
     { id: 9, name: 'Mibessy Gregu Chadrack', edition: 2, year: 2024, specialization: 'Formateur Crypto Afrique Futur', photo: '/shadrack.png' },
