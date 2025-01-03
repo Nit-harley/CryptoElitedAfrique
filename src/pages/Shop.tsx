@@ -116,9 +116,9 @@ export default function Shop() {
 
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r text-white py-20">
+      <section className="bg-gradient-to-r text-white py-28 mt-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold mb-6">Boutique Crypto Élite</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Boutique Crypto Élite</h1>
           <p className="text-xl max-w-3xl mx-auto">
             Découvrez des articles uniques pour les passionnés de cryptomonnaies.
           </p>
