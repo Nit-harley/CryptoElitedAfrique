@@ -35,6 +35,7 @@ export default function Shop() {
     const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+  
 
   const addToCart = (product: Product) => {
     setCart((prevCart) => {

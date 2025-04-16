@@ -43,7 +43,7 @@ export default function Navbar() {
               À propos
             </Link>
             <a
-              href="https://api.whatsapp.com/send?phone=%2B24160422342&context=ARDitGLoGOK3cBCqVGYoeIMhvGoan8JkAczlzu1mM868nyW6_g8wnXXEdCSAKnAcCNqMBjblMTGltULkNXu4Ai9x0GeX53YIlvU80D7f5eo3qI7kVTd2_i9kUozLKY6_jKkGYDKC_w7Qnb__3Kuy58E2uQ&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawHhMaVleHRuA2FlbQIxMAABHejG-cod0nAlo_yI0wE2QI_HfJe7DAktXucDacBjrXv9MtBc4wR7tZmBuQ_aem_gKyBZhBq94k0QBOlvN2OAgt"
+              href="https://api.whatsapp.com/send?phone=%2B24107976941&text=Bonjour%2C%20je%20voudrais%20m%27inscrire%20%C3%A0%20la%204%C3%A8me%20%C3%A9dition%20du%20Crypto%20Elite%20d%27Afrique"
               className="bg-[#fd5f05] text-white px-4 py-2 rounded-md hover:bg-[#e54d00] transition-colors"
             >
               S'inscrire

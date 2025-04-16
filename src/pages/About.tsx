@@ -130,7 +130,7 @@ export default function About() {
           Découvrez l'histoire complète dans "De Sceptique À Passionné Par les Cryptomonnaies"
         </p>
         <a
-          href="https://api.whatsapp.com/send?phone=%2B24107976941&context=ARDitGLoGOK3cBCqVGYoeIMhvGoan8JkAczlzu1mM868nyW6_g8wnXXEdCSAKnAcCNqMBjblMTGltULkNXu4Ai9x0GeX53YIlvU80D7f5eo3qI7kVTd2_i9kUozLKY6_jKkGYDKC_w7Qnb__3Kuy58E2uQ&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawHhMaVleHRuA2FlbQIxMAABHejG-cod0nAlo_yI0wE2QI_HfJe7DAktXucDacBjrXv9MtBc4wR7tZmBuQ_aem_gKyBZhBq94k0QBOlvN2OAg"
+          href="https://api.whatsapp.com/send?phone=%2B24107976941&text=Bonjour%2C%20je%20voudrais%20acheter%20le%20livre%20s%27il%20vous%20pla%C3%AEt&context=ARDitGLoGOK3cBCqVGYoeIMhvGoan8JkAczlzu1mM868nyW6_g8wnXXEdCSAKnAcCNqMBjblMTGltULkNXu4Ai9x0GeX53YIlvU80D7f5eo3qI7kVTd2_i9kUozLKY6_jKkGYDKC_w7Qnb__3Kuy58E2uQ&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawHhMaVleHRuA2FlbQIxMAABHejG-cod0nAlo_yI0wE2QI_HfJe7DAktXucDacBjrXv9MtBc4wR7tZmBuQ_aem_gKyBZhBq94k0QBOlvN2OAg"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 inline-block"

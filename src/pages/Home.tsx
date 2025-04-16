@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowRight, Users, Award, BookOpen, TrendingUp, Youtube } from 'lucide-react';
 import CountUp from "react-countup";
 
+
 export default function Home() {
+  const [showTotalEssentiel, setShowTotalEssentiel] = useState(false);
+const [showTotalPremium, setShowTotalPremium] = useState(false);
   return (
     <div className="pt-16">
     {/* Hero Section */}
@@ -264,76 +267,102 @@ Nous sommes avec vous main dans la main, pour transformer vos connaissances et v
 </section>
 
 {/* Pricing Section */}
-<section className="py-16 bg-gray-50">
+<section className="py-20 bg-gray-50">
   <div className="max-w-7xl mx-auto px-6 lg:px-8">
-    {/* Header Section */}
-    <div className="text-center mb-12">
+    {/* Header */}
+    <div className="text-center mb-16">
       <h2 className="text-4xl font-extrabold text-gray-800">
-        Une Formation Unique en Cryptomonnaies
+        Rejoignez le mouvement Crypto Elite d’Afrique
       </h2>
       <p className="text-lg text-gray-600 mt-4">
-        Développez vos compétences avec un tarif clair et accessible. Investissez dans votre avenir dès aujourd'hui !
+        Deux options pour deux niveaux d’engagement. Choisissez la formule qui correspond à vos ambitions.
       </p>
     </div>
 
-    {/* Pricing Card */}
-    <div className="max-w-lg mx-auto bg-white rounded-lg shadow-lg overflow-hidden border-2 border-[#FD5F05]">
-      <div className="p-8">
-        <h3 className="text-2xl font-bold text-center text-gray-800 mb-4">
-          Offre de Formation Complète
-        </h3>
-        <div className="flex justify-center items-center mb-6">
-          <p className="text-4xl font-extrabold text-[#FD5F05]">
-            310,000 FCFA
-          </p>
-          <span className="text-gray-500 text-sm ml-2">(Total sur 3 mois)</span>
+    {/* Pricing Cards */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      {/* ESSENTIELLE */}
+      <div className="bg-white border-2 border-[#1D4ED8] rounded-2xl shadow-xl p-8 relative hover:scale-[1.02] transition">
+        <div className="absolute top-0 left-0 bg-[#1D4ED8] text-white px-4 py-1 text-sm font-semibold rounded-br-xl">
+          Essentielle
         </div>
-        <p className="text-center text-gray-600 mb-8">
-          <strong>Inscription :</strong> <span className="text-[#FD5F05]">10,000 FCFA</span> <br />
-          <strong>Formation :</strong> <span className="text-[#FD5F05]">100,000 FCFA / mois</span> sur 3 mois
-        </p>
-
-        {/* Features List */}
-        <ul className="text-gray-600 space-y-4 mb-8">
-          <li className="flex items-center">
-            <svg className="h-6 w-6 text-[#FD5F05] mr-3" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-            Accès complet aux modules et ressources
-          </li>
-          <li className="flex items-center">
-            <svg className="h-6 w-6 text-[#FD5F05] mr-3" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-            Suivi personnalisé avec des experts
-          </li>
-          <li className="flex items-center">
-            <svg className="h-6 w-6 text-[#FD5F05] mr-3" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-            Certification à la fin de la formation
-          </li>
+        <h3 className="text-2xl font-bold text-center text-gray-800 mb-6">
+          Formation 100% en ligne, sans accompagnement
+        </h3>
+        <div className="text-center mb-4">
+          <p className="text-4xl font-extrabold text-[#1D4ED8]">45,000 FCFA</p>
+          <p className="text-sm text-gray-500">par mois sur 3 mois</p>
+        </div>
+        <div className="text-center mb-4">
+          <button
+            onClick={() => setShowTotalEssentiel(!showTotalEssentiel)}
+            className="text-sm text-blue-600 underline"
+          >
+            {showTotalEssentiel ? "Masquer le total" : "Voir le coût total"}
+          </button>
+          {showTotalEssentiel && (
+            <p className="text-sm mt-1 text-gray-700">Total : 135,000 FCFA</p>
+          )}
+        </div>
+        <ul className="space-y-4 text-gray-600 mb-8">
+          <li>✅ Accès à 100% des vidéos pré-enregistrées</li>
+          <li>✅ Apprenez à votre rythme, sans contrainte</li>
+          <li>✅ Contenu structuré en 3 modules clairs</li>
+          <li>✅ Certificat & test final (optionnels, payants)</li>
         </ul>
-
-        {/* CTA Button */}
         <div className="text-center">
-  <a
-    href="https://api.whatsapp.com/send?phone=%2B24160422342&context=ARDitGLoGOK3cBCqVGYoeIMhvGoan8JkAczlzu1mM868nyW6_g8wnXXEdCSAKnAcCNqMBjblMTGltULkNXu4Ai9x0GeX53YIlvU80D7f5eo3qI7kVTd2_i9kUozLKY6_jKkGYDKC_w7Qnb__3Kuy58E2uQ&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawHhMaVleHRuA2FlbQIxMAABHejG-cod0nAlo_yI0wE2QI_HfJe7DAktXucDacBjrXv9MtBc4wR7tZmBuQ_aem_gKyBZhBq94k0QBOlvN2OAgt"
-    className="bg-[#FD5F05] text-white font-bold text-lg px-8 py-4 rounded-full shadow-md hover:bg-[#e45405] transition duration-300 w-full sm:w-auto"
-  >
-    S'inscrire
-  </a>
-</div>
-
+          <a
+            href="https://api.whatsapp.com/send?phone=%2B24107976941&text=Bonjour%2C%20je%20souhaite%20m'inscrire%20à%20la%20Formule%20Essentielle"
+            className="bg-[#1D4ED8] text-white font-bold px-8 py-4 rounded-full hover:bg-[#153da2] transition"
+          >
+            Je commence maintenant
+          </a>
+        </div>
       </div>
-      <div className="bg-[#FD5F05] py-4 text-center text-white">
-        <p className="text-sm">
-          Dépêchez-vous, les places sont limitées !
-        </p>
+
+      {/* PREMIUM */}
+      <div className="bg-white border-2 border-[#FD5F05] rounded-2xl shadow-xl p-8 relative hover:scale-[1.02] transition">
+        <div className="absolute top-0 left-0 bg-[#FD5F05] text-white px-4 py-1 text-sm font-semibold rounded-br-xl">
+          Premium
+        </div>
+        <h3 className="text-2xl font-bold text-center text-gray-800 mb-6">
+          Formation complète avec accompagnement personnalisé
+        </h3>
+        <div className="text-center mb-4">
+          <p className="text-4xl font-extrabold text-[#FD5F05]">160,000 FCFA</p>
+          <p className="text-sm text-gray-500">par mois sur 3 mois</p>
+        </div>
+        <div className="text-center mb-4">
+          <button
+            onClick={() => setShowTotalPremium(!showTotalPremium)}
+            className="text-sm text-orange-600 underline"
+          >
+            {showTotalPremium ? "Masquer le total" : "Voir le coût total"}
+          </button>
+          {showTotalPremium && (
+            <p className="text-sm mt-1 text-gray-700">Total : 500,000 FCFA</p>
+          )}
+        </div>
+        <ul className="space-y-4 text-gray-600 mb-8">
+          <li>✅ Tous les avantages de l'offre Essentielle</li>
+          <li>✅ Accompagnement personnalisé chaque semaine</li>
+          <li>✅ Groupe privé et accès direct à l’équipe pédagogique</li>
+          <li>✅ Certificat officiel et test de fin de formation inclus</li>
+          <li>✅ Accès à vie à la plateforme de formation</li>
+        </ul>
+        <div className="text-center">
+          <a
+            href="https://api.whatsapp.com/send?phone=%2B24107976941&text=Bonjour%2C%20je%20souhaite%20m'inscrire%20à%20la%20Formule%20Premium"
+            className="bg-[#FD5F05] text-white font-bold px-8 py-4 rounded-full hover:bg-[#e45405] transition"
+          >
+            Je m’inscris avec accompagnement
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
 
 
 
@@ -388,7 +417,7 @@ Nous sommes avec vous main dans la main, pour transformer vos connaissances et v
             Rejoignez la 4ème édition du Crypto Elite d'Afrique
           </p>
           <a
-            href="https://api.whatsapp.com/send?phone=%2B24160422342&context=ARDitGLoGOK3cBCqVGYoeIMhvGoan8JkAczlzu1mM868nyW6_g8wnXXEdCSAKnAcCNqMBjblMTGltULkNXu4Ai9x0GeX53YIlvU80D7f5eo3qI7kVTd2_i9kUozLKY6_jKkGYDKC_w7Qnb__3Kuy58E2uQ&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawHhMaVleHRuA2FlbQIxMAABHejG-cod0nAlo_yI0wE2QI_HfJe7DAktXucDacBjrXv9MtBc4wR7tZmBuQ_aem_gKyBZhBq94k0QBOlvN2OAgt"
+           href="https://api.whatsapp.com/send?phone=%2B24107976941&text=Bonjour%2C%20je%20voudrais%20m%27inscrire%20%C3%A0%20la%204%C3%A8me%20%C3%A9dition%20du%20Crypto%20Elite%20d%27Afrique"
             className="inline-block bg-white text-[#fd5f05] px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             S'inscrire Maintenant
