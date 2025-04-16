@@ -225,7 +225,7 @@ Nous sommes avec vous main dans la main, pour transformer vos connaissances et v
               />
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">3ème Édition</h3>
-                <p className="text-gray-600">En cours - Rejoignez l'aventure !</p>
+                <p className="text-gray-600">7 étudiants formés avec succès</p>
               </div>
             </div>
           </div>
@@ -315,7 +315,7 @@ Nous sommes avec vous main dans la main, pour transformer vos connaissances et v
             href="https://api.whatsapp.com/send?phone=%2B24107976941&text=Bonjour%2C%20je%20souhaite%20m'inscrire%20à%20la%20Formule%20Essentielle"
             className="bg-[#1D4ED8] text-white font-bold px-8 py-4 rounded-full hover:bg-[#153da2] transition"
           >
-            Je commence maintenant
+            S'inscrire
           </a>
         </div>
       </div>
@@ -355,7 +355,7 @@ Nous sommes avec vous main dans la main, pour transformer vos connaissances et v
             href="https://api.whatsapp.com/send?phone=%2B24107976941&text=Bonjour%2C%20je%20souhaite%20m'inscrire%20à%20la%20Formule%20Premium"
             className="bg-[#FD5F05] text-white font-bold px-8 py-4 rounded-full hover:bg-[#e45405] transition"
           >
-            Je m’inscris avec accompagnement
+            S'inscrire
           </a>
         </div>
       </div>
