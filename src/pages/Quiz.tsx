@@ -288,7 +288,8 @@ export default function Quiz() {
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [showExplanation, setShowExplanation] = useState(false);
   const [timeLeft, setTimeLeft] = useState(15);
-  const [quizStarted, setQuizStarted] = useState(false); 
+  const [quizStarted, setQuizStarted] = useState(false);
+  const [userName, setUserName] = useState(""); // Nouveau champ pour le nom de l'utilisateur
 
   useEffect(() => {
     if (quizStarted && timeLeft > 0) {
@@ -301,7 +302,7 @@ export default function Quiz() {
 
   const startQuiz = () => {
     setQuizStarted(true);
-    setTimeLeft(15); 
+    setTimeLeft(15);
   };
 
   const handleAnswerClick = (selectedOption: number) => {
@@ -333,6 +334,14 @@ export default function Quiz() {
     setShowExplanation(false);
     setTimeLeft(15);
     setQuizStarted(false);
+    setUserName(""); // Réinitialiser le nom à chaque redémarrage du quiz
+  };
+
+  // Fonction pour créer le lien WhatsApp avec le score, la mention "obtenu" et l'invitation à participer
+  const generateWhatsAppLink = () => {
+    const message = `Je viens de terminer un quiz sur les cryptomonnaies et j'ai obtenu un score de ${score} sur ${questions.length}. ${userName ? `Moi c'est ${userName}.` : ''} Et vous, pouvez-vous faire mieux ? Participez à votre tour en cliquant ici : https://cryptoelitedafrique.netlify.app/quiz`;
+    const encodedMessage = encodeURIComponent(message);
+    return `https://wa.me/?text=${encodedMessage}`;
   };
 
   return (
@@ -362,9 +371,28 @@ export default function Quiz() {
                 ) : (
                   <p className="text-red-600 mb-6">Vous pouvez améliorer vos connaissances en suivant notre formation !</p>
                 )}
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Entrez votre nom"
+                    value={userName}
+                    onChange={(e) => setUserName(e.target.value)}
+                    className="mb-4 p-2 border rounded"
+                  />
+                  {userName && (
+                    <a
+                      href={generateWhatsAppLink()}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#25D366] text-white px-6 py-3 rounded-full hover:bg-[#128C7E] transition-colors"
+                    >
+                      Partager sur WhatsApp
+                    </a>
+                  )}
+                </div>
                 <button
                   onClick={resetQuiz}
-                  className="bg-[#fd5f05] text-white px-6 py-3 rounded-full hover:bg-[#e54d00] transition-colors"
+                  className="bg-[#fd5f05] text-white px-6 py-3 rounded-full hover:bg-[#e54d00] transition-colors mt-4"
                 >
                   Recommencer le Quiz
                 </button>
